@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISE - Written in Stone Eternally | Gemstone Grading Institute</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        .hero-background {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body x-data="{ mobileMenuOpen: false }" class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/api/placeholder/100/100" alt="WISE Logo" class="h-12 mr-4">
+                <h1 class="text-2xl font-bold text-blue-800">WISE Institute</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-600">Home</a>
+                <a href="#about" class="hover:text-blue-600">About Us</a>
+                <a href="#services" class="hover:text-blue-600">Grading Services</a>
+                <a href="#resources" class="hover:text-blue-600">Resources</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" class="md:hidden bg-white">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#home" class="block py-2 hover:bg-gray-100">Home</a>
+                <a href="#about" class="block py-2 hover:bg-gray-100">About Us</a>
+                <a href="#services" class="block py-2 hover:bg-gray-100">Grading Services</a>
+                <a href="#resources" class="block py-2 hover:bg-gray-100">Resources</a>
+                <a href="#contact" class="block bg-blue-600 text-white text-center py-2 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background text-white text-center py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6">Precision in Every Gem</h2>
+            <p class="text-xl mb-8">WISE: Setting the Global Standard in Gemstone Certification</p>
+            <a href="#services" class="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Explore Services</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">About WISE Institute</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-700 mb-4">
+                        WISE (Written in Stone Eternally) is a premier gemstone grading institute dedicated to providing unparalleled certification and research in gem evaluation.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Our expert gemologists use state-of-the-art technology to assess and certify diamonds and precious stones with the highest level of precision and integrity.
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✓ Advanced Grading Techniques</li>
+                        <li>✓ Global Recognition</li>
+                        <li>✓ Cutting-Edge Research</li>
+                    </ul>
+                </div>
+                <img src="/api/placeholder/600/400" alt="WISE Gemstone Laboratory" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Grading Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Diamond Certification</h3>
+                    <p>Comprehensive analysis of diamond quality, cut, clarity, color, and carat weight.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Gemstone Evaluation</h3>
+                    <p>Precise grading and authentication of colored gemstones and rare minerals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Research & Innovation</h3>
+                    <p>Cutting-edge research in gemological techniques and stone characterization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-50">
+        <div class="max-w-xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact WISE Institute</h2>
+            <form class="bg-white p-8 rounded-lg shadow-md">
+                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded h-32"></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-4">WISE Institute</h4>
+                <p>Written in Stone Eternally: Precision in Gemstone Certification</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                    <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                <p>Email: info@wiseinstitute.com</p>
+                <p>Phone: +1 (555) GEMSTONE</p>
+                <p>Address: Global Gem Center, Suite 1000</p>
+            </div>
+        </div>
+        <div class="text-center mt-8 border-t border-gray-700 pt-4">
+            © 2024 WISE Institute. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
